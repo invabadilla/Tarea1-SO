@@ -1,0 +1,140 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Proyectos\Quartus\Tarea1-SO\platform.qsys --block-symbol-file --output-directory=D:\Proyectos\Quartus\Tarea1-SO\platform --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Tarea1-SO/platform.qsys
+Progress: Reading input file
+Progress: Adding CPU_0 [altera_nios2_gen2 20.1]
+Progress: Parameterizing module CPU_0
+Progress: Adding RAM_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module RAM_0
+Progress: Adding ROM_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module ROM_0
+Progress: Adding button_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module button_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding segm_min_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module segm_min_0
+Progress: Adding segm_ms_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module segm_ms_0
+Progress: Adding segm_s_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module segm_s_0
+Progress: Adding switches_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module switches_0
+Progress: Adding timer_0 [altera_avalon_timer 20.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: platform.CPU_0: No Debugger.  You will not be able to download or debug programs
+Info: platform.button_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: platform.switches_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Proyectos\Quartus\Tarea1-SO\platform.qsys --synthesis=VERILOG --output-directory=D:\Proyectos\Quartus\Tarea1-SO\platform\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Tarea1-SO/platform.qsys
+Progress: Reading input file
+Progress: Adding CPU_0 [altera_nios2_gen2 20.1]
+Progress: Parameterizing module CPU_0
+Progress: Adding RAM_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module RAM_0
+Progress: Adding ROM_0 [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module ROM_0
+Progress: Adding button_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module button_0
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding segm_min_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module segm_min_0
+Progress: Adding segm_ms_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module segm_ms_0
+Progress: Adding segm_s_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module segm_s_0
+Progress: Adding switches_0 [altera_avalon_pio 20.1]
+Progress: Parameterizing module switches_0
+Progress: Adding timer_0 [altera_avalon_timer 20.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: platform.CPU_0: No Debugger.  You will not be able to download or debug programs
+Info: platform.button_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: platform.switches_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: platform: Generating platform "platform" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master CPU_0.instruction_master and slave ROM_0.s1 because the master has address signal 15 bit wide, but the slave is 10 bit wide.
+Info: Interconnect is inserted between master CPU_0.instruction_master and slave ROM_0.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master CPU_0.instruction_master and slave ROM_0.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: CPU_0: "platform" instantiated altera_nios2_gen2 "CPU_0"
+Info: RAM_0: Starting RTL generation for module 'platform_RAM_0'
+Info: RAM_0:   Generation command is [exec D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/lib -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_RAM_0 --dir=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0366_RAM_0_gen/ --quartus_dir=D:/programas/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0366_RAM_0_gen//platform_RAM_0_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM_0: Done RTL generation for module 'platform_RAM_0'
+Info: RAM_0: "platform" instantiated altera_avalon_onchip_memory2 "RAM_0"
+Info: ROM_0: Starting RTL generation for module 'platform_ROM_0'
+Info: ROM_0:   Generation command is [exec D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/lib -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_ROM_0 --dir=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0367_ROM_0_gen/ --quartus_dir=D:/programas/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0367_ROM_0_gen//platform_ROM_0_component_configuration.pl  --do_build_sim=0  ]
+Info: ROM_0: Done RTL generation for module 'platform_ROM_0'
+Info: ROM_0: "platform" instantiated altera_avalon_onchip_memory2 "ROM_0"
+Info: button_0: Starting RTL generation for module 'platform_button_0'
+Info: button_0:   Generation command is [exec D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/lib -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_button_0 --dir=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0368_button_0_gen/ --quartus_dir=D:/programas/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0368_button_0_gen//platform_button_0_component_configuration.pl  --do_build_sim=0  ]
+Info: button_0: Done RTL generation for module 'platform_button_0'
+Info: button_0: "platform" instantiated altera_avalon_pio "button_0"
+Info: segm_min_0: Starting RTL generation for module 'platform_segm_min_0'
+Info: segm_min_0:   Generation command is [exec D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/lib -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_segm_min_0 --dir=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0369_segm_min_0_gen/ --quartus_dir=D:/programas/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0369_segm_min_0_gen//platform_segm_min_0_component_configuration.pl  --do_build_sim=0  ]
+Info: segm_min_0: Done RTL generation for module 'platform_segm_min_0'
+Info: segm_min_0: "platform" instantiated altera_avalon_pio "segm_min_0"
+Info: switches_0: Starting RTL generation for module 'platform_switches_0'
+Info: switches_0:   Generation command is [exec D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I D:/programas/intelfpga_lite/20.1/quartus/bin64/perl/lib -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_switches_0 --dir=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0370_switches_0_gen/ --quartus_dir=D:/programas/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0370_switches_0_gen//platform_switches_0_component_configuration.pl  --do_build_sim=0  ]
+Info: switches_0: Done RTL generation for module 'platform_switches_0'
+Info: switches_0: "platform" instantiated altera_avalon_pio "switches_0"
+Info: timer_0: Starting RTL generation for module 'platform_timer_0'
+Info: timer_0:   Generation command is [exec D:/Programas/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I D:/Programas/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=platform_timer_0 --dir=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0371_timer_0_gen/ --quartus_dir=D:/programas/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0371_timer_0_gen//platform_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'platform_timer_0'
+Info: timer_0: "platform" instantiated altera_avalon_timer "timer_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "platform" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "platform" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: irq_mapper: "platform" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "platform" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'platform_CPU_0_cpu'
+Info: cpu:   Generation command is [exec D:/Programas/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I D:/Programas/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I D:/programas/intelfpga_lite/20.1/quartus/sopc_builder/bin -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/programas/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=platform_CPU_0_cpu --dir=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0374_cpu_gen/ --quartus_bindir=D:/Programas/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/BRYANM~1/AppData/Local/Temp/alt9584_5040387919713077868.dir/0374_cpu_gen//platform_CPU_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.08.15 01:25:33 (*) Starting Nios II generation
+Info: cpu: # 2023.08.15 01:25:33 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.08.15 01:25:33 (*)   Creating all objects for CPU
+Info: cpu: # 2023.08.15 01:25:34 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.08.15 01:25:34 (*)   Creating plain-text RTL
+Info: cpu: # 2023.08.15 01:25:34 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'platform_CPU_0_cpu'
+Info: cpu: "CPU_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: CPU_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_0_data_master_translator"
+Info: RAM_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "RAM_0_s1_translator"
+Info: CPU_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "CPU_0_data_master_agent"
+Info: RAM_0_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "RAM_0_s1_agent"
+Info: RAM_0_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "RAM_0_s1_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Proyectos/Quartus/Tarea1-SO/platform/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/Proyectos/Quartus/Tarea1-SO/platform/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Proyectos/Quartus/Tarea1-SO/platform/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: platform: Done "platform" with 31 modules, 40 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

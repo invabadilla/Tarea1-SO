@@ -1,0 +1,15 @@
+module Tarea1-SO (
+		input  logic        clk_clk,
+		input  logic [1:0]  buttons,         
+		input  logic        rst_n,                            
+		input  logic [2:0]  switches,		
+		output logic [13:0] segm_min, 
+		output logic [13:0] segm_ms,  
+		output logic [13:0] segm_s   
+);
+
+	
+
+
+
+endmodule 

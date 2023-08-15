@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="platform" kind="platform" version="1.0" fabric="QSYS">
  <!-- Format version 20.1 711 (Future versions may contain additional information.) -->
- <!-- 2023.08.14.18:57:41 -->
+ <!-- 2023.08.15.01:40:31 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1692061061</value>
+  <value>1692085231</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1702,7 +1702,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='RAM_0.s1' start='0x0' end='0x4000' type='altera_avalon_onchip_memory2.s1' /><slave name='timer_0.s1' start='0x5000' end='0x5020' type='altera_avalon_timer.s1' /><slave name='segm_min_0.s1' start='0x5020' end='0x5030' type='altera_avalon_pio.s1' /><slave name='segm_s_0.s1' start='0x5030' end='0x5040' type='altera_avalon_pio.s1' /><slave name='segm_ms_0.s1' start='0x5040' end='0x5050' type='altera_avalon_pio.s1' /><slave name='buttons_0.s1' start='0x5050' end='0x5060' type='altera_avalon_pio.s1' /><slave name='switches_0.s1' start='0x5060' end='0x5070' type='altera_avalon_pio.s1' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='RAM_0.s1' start='0x0' end='0x4000' type='altera_avalon_onchip_memory2.s1' /><slave name='timer_0.s1' start='0x5000' end='0x5020' type='altera_avalon_timer.s1' /><slave name='segm_min_0.s1' start='0x5020' end='0x5030' type='altera_avalon_pio.s1' /><slave name='segm_s_0.s1' start='0x5030' end='0x5040' type='altera_avalon_pio.s1' /><slave name='segm_ms_0.s1' start='0x5040' end='0x5050' type='altera_avalon_pio.s1' /><slave name='button_0.s1' start='0x5050' end='0x5060' type='altera_avalon_pio.s1' /><slave name='switches_0.s1' start='0x5060' end='0x5070' type='altera_avalon_pio.s1' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2382,9 +2382,9 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>buttons_0</moduleName>
+    <moduleName>button_0</moduleName>
     <slaveName>s1</slaveName>
-    <name>buttons_0.s1</name>
+    <name>button_0.s1</name>
     <baseAddress>20560</baseAddress>
     <span>16</span>
    </memoryBlock>
@@ -2785,9 +2785,9 @@ parameters are a RESULT of the module parameters. -->
    </interrupt>
    <interrupt>
     <isBridge>false</isBridge>
-    <moduleName>buttons_0</moduleName>
+    <moduleName>button_0</moduleName>
     <slaveName>irq</slaveName>
-    <name>buttons_0.irq</name>
+    <name>button_0.irq</name>
     <interruptNumber>1</interruptNumber>
    </interrupt>
   </interface>
@@ -4623,10 +4623,10 @@ parameters are a RESULT of the module parameters. -->
   </interface>
  </module>
  <module
-   name="buttons_0"
+   name="button_0"
    kind="altera_avalon_pio"
    version="20.1"
-   path="buttons_0">
+   path="button_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -4643,7 +4643,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DATA_WIDTH</name>
-   <value>2</value>
+   <value>1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DO_TEST_BENCH_WIRING</name>
@@ -4695,7 +4695,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,gpio-bank-width</name>
-   <value>2</value>
+   <value>1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,interrupt-type</name>
@@ -4803,7 +4803,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="width">
    <type>int</type>
-   <value>2</value>
+   <value>1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5411,7 +5411,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>in_port</name>
     <direction>Input</direction>
-    <width>2</width>
+    <width>1</width>
     <role>export</role>
    </port>
   </interface>
@@ -5425,7 +5425,7 @@ parameters are a RESULT of the module parameters. -->
    </assignment>
    <parameter name="associatedAddressablePoint">
     <type>com.altera.entityinterfaces.IConnectionPoint</type>
-    <value>buttons_0.s1</value>
+    <value>button_0.s1</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -5752,9 +5752,9 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>buttons_0</moduleName>
+    <moduleName>button_0</moduleName>
     <slaveName>clk</slaveName>
-    <name>buttons_0.clk</name>
+    <name>button_0.clk</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -8204,7 +8204,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DATA_WIDTH</name>
-   <value>3</value>
+   <value>2</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DO_TEST_BENCH_WIRING</name>
@@ -8256,7 +8256,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,gpio-bank-width</name>
-   <value>3</value>
+   <value>2</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.resetvalue</name>
@@ -8348,7 +8348,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="width">
    <type>int</type>
-   <value>3</value>
+   <value>2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8938,7 +8938,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>in_port</name>
     <direction>Input</direction>
-    <width>3</width>
+    <width>2</width>
     <role>export</role>
    </port>
   </interface>
@@ -9863,11 +9863,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="CPU_0.data_master/buttons_0.s1"
+   name="CPU_0.data_master/button_0.s1"
    kind="avalon"
    version="20.1"
    start="CPU_0.data_master"
-   end="buttons_0.s1">
+   end="button_0.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -9910,7 +9910,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>CPU_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-  <endModule>buttons_0</endModule>
+  <endModule>button_0</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
@@ -10199,11 +10199,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/buttons_0.clk"
+   name="clk_0.clk/button_0.clk"
    kind="clock"
    version="20.1"
    start="clk_0.clk"
-   end="buttons_0.clk">
+   end="button_0.clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -10222,7 +10222,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>buttons_0</endModule>
+  <endModule>button_0</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
@@ -10396,11 +10396,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
-   name="CPU_0.irq/buttons_0.irq"
+   name="CPU_0.irq/button_0.irq"
    kind="interrupt"
    version="20.1"
    start="CPU_0.irq"
-   end="buttons_0.irq">
+   end="button_0.irq">
   <parameter name="irqNumber">
    <type>int</type>
    <value>1</value>
@@ -10427,7 +10427,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>CPU_0</startModule>
   <startConnectionPoint>irq</startConnectionPoint>
-  <endModule>buttons_0</endModule>
+  <endModule>button_0</endModule>
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
@@ -10512,11 +10512,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk_reset/buttons_0.reset"
+   name="clk_0.clk_reset/button_0.reset"
    kind="reset"
    version="20.1"
    start="clk_0.clk_reset"
-   end="buttons_0.reset">
+   end="button_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -10535,7 +10535,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>buttons_0</endModule>
+  <endModule>button_0</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
