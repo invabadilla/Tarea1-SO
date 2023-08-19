@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Aug 15 01:40:46 2023
+Analysis & Synthesis Status : Successful - Wed Aug 16 14:41:15 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Tarea1-SO
 Top-level Entity Name : Tarea1_SO
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 479
-Total pins : 47
+Total registers : 493
+Total pins : 48
 Total virtual pins : 0
 Total block memory bits : 165,888
 Total DSP Blocks : 0

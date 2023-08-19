@@ -180,7 +180,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "button",
+					"name" : "button_0",
+					"strict" : false
+				},
+				{
+					"name" : "button_1",
 					"strict" : false
 				},
 				{

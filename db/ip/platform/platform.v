@@ -5,6 +5,7 @@
 `timescale 1 ps / 1 ps
 module platform (
 		input  wire        button_0_external_connection_export,   //   button_0_external_connection.export
+		input  wire        button_1_external_connection_export,   //   button_1_external_connection.export
 		input  wire        clk_clk,                               //                            clk.clk
 		input  wire        reset_reset_n,                         //                          reset.reset_n
 		output wire [13:0] segm_min_0_external_connection_export, // segm_min_0_external_connection.export
@@ -54,6 +55,11 @@ module platform (
 	wire   [1:0] mm_interconnect_0_segm_min_0_s1_address;    // mm_interconnect_0:segm_min_0_s1_address -> segm_min_0:address
 	wire         mm_interconnect_0_segm_min_0_s1_write;      // mm_interconnect_0:segm_min_0_s1_write -> segm_min_0:write_n
 	wire  [31:0] mm_interconnect_0_segm_min_0_s1_writedata;  // mm_interconnect_0:segm_min_0_s1_writedata -> segm_min_0:writedata
+	wire         mm_interconnect_0_button_1_s1_chipselect;   // mm_interconnect_0:button_1_s1_chipselect -> button_1:chipselect
+	wire  [31:0] mm_interconnect_0_button_1_s1_readdata;     // button_1:readdata -> mm_interconnect_0:button_1_s1_readdata
+	wire   [1:0] mm_interconnect_0_button_1_s1_address;      // mm_interconnect_0:button_1_s1_address -> button_1:address
+	wire         mm_interconnect_0_button_1_s1_write;        // mm_interconnect_0:button_1_s1_write -> button_1:write_n
+	wire  [31:0] mm_interconnect_0_button_1_s1_writedata;    // mm_interconnect_0:button_1_s1_writedata -> button_1:writedata
 	wire  [31:0] cpu_0_instruction_master_readdata;          // mm_interconnect_1:CPU_0_instruction_master_readdata -> CPU_0:i_readdata
 	wire         cpu_0_instruction_master_waitrequest;       // mm_interconnect_1:CPU_0_instruction_master_waitrequest -> CPU_0:i_waitrequest
 	wire  [14:0] cpu_0_instruction_master_address;           // CPU_0:i_address -> mm_interconnect_1:CPU_0_instruction_master_address
@@ -68,8 +74,9 @@ module platform (
 	wire         mm_interconnect_1_rom_0_s1_clken;           // mm_interconnect_1:ROM_0_s1_clken -> ROM_0:clken
 	wire         irq_mapper_receiver0_irq;                   // timer_0:irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                   // button_0:irq -> irq_mapper:receiver1_irq
+	wire         irq_mapper_receiver2_irq;                   // button_1:irq -> irq_mapper:receiver2_irq
 	wire  [31:0] cpu_0_irq_irq;                              // irq_mapper:sender_irq -> CPU_0:irq
-	wire         rst_controller_reset_out_reset;             // rst_controller:reset_out -> [CPU_0:reset_n, RAM_0:reset, ROM_0:reset, button_0:reset_n, irq_mapper:reset, mm_interconnect_0:CPU_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:CPU_0_reset_reset_bridge_in_reset_reset, rst_translator:in_reset, segm_min_0:reset_n, segm_ms_0:reset_n, segm_s_0:reset_n, switches_0:reset_n, timer_0:reset_n]
+	wire         rst_controller_reset_out_reset;             // rst_controller:reset_out -> [CPU_0:reset_n, RAM_0:reset, ROM_0:reset, button_0:reset_n, button_1:reset_n, irq_mapper:reset, mm_interconnect_0:CPU_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:CPU_0_reset_reset_bridge_in_reset_reset, rst_translator:in_reset, segm_min_0:reset_n, segm_ms_0:reset_n, segm_s_0:reset_n, switches_0:reset_n, timer_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;         // rst_controller:reset_req -> [RAM_0:reset_req, ROM_0:reset_req, rst_translator:reset_req_in]
 
 	platform_CPU_0 cpu_0 (
@@ -129,6 +136,18 @@ module platform (
 		.readdata   (mm_interconnect_0_button_0_s1_readdata),   //                    .readdata
 		.in_port    (button_0_external_connection_export),      // external_connection.export
 		.irq        (irq_mapper_receiver1_irq)                  //                 irq.irq
+	);
+
+	platform_button_0 button_1 (
+		.clk        (clk_clk),                                  //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),          //               reset.reset_n
+		.address    (mm_interconnect_0_button_1_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_button_1_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_button_1_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_button_1_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_button_1_s1_readdata),   //                    .readdata
+		.in_port    (button_1_external_connection_export),      // external_connection.export
+		.irq        (irq_mapper_receiver2_irq)                  //                 irq.irq
 	);
 
 	platform_segm_min_0 segm_min_0 (
@@ -198,6 +217,11 @@ module platform (
 		.button_0_s1_readdata                    (mm_interconnect_0_button_0_s1_readdata),     //                                  .readdata
 		.button_0_s1_writedata                   (mm_interconnect_0_button_0_s1_writedata),    //                                  .writedata
 		.button_0_s1_chipselect                  (mm_interconnect_0_button_0_s1_chipselect),   //                                  .chipselect
+		.button_1_s1_address                     (mm_interconnect_0_button_1_s1_address),      //                       button_1_s1.address
+		.button_1_s1_write                       (mm_interconnect_0_button_1_s1_write),        //                                  .write
+		.button_1_s1_readdata                    (mm_interconnect_0_button_1_s1_readdata),     //                                  .readdata
+		.button_1_s1_writedata                   (mm_interconnect_0_button_1_s1_writedata),    //                                  .writedata
+		.button_1_s1_chipselect                  (mm_interconnect_0_button_1_s1_chipselect),   //                                  .chipselect
 		.RAM_0_s1_address                        (mm_interconnect_0_ram_0_s1_address),         //                          RAM_0_s1.address
 		.RAM_0_s1_write                          (mm_interconnect_0_ram_0_s1_write),           //                                  .write
 		.RAM_0_s1_readdata                       (mm_interconnect_0_ram_0_s1_readdata),        //                                  .readdata
@@ -251,6 +275,7 @@ module platform (
 		.reset         (rst_controller_reset_out_reset), // clk_reset.reset
 		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
 		.receiver1_irq (irq_mapper_receiver1_irq),       // receiver1.irq
+		.receiver2_irq (irq_mapper_receiver2_irq),       // receiver2.irq
 		.sender_irq    (cpu_0_irq_irq)                   //    sender.irq
 	);
 

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU_0' in SOPC Builder design 'platform'
  * SOPC Builder design path: D:/Proyectos/Quartus/Tarea1-SO/platform.sopcinfo
  *
- * Generated: Tue Aug 15 01:29:51 CST 2023
+ * Generated: Wed Aug 16 13:39:32 CST 2023
  */
 
 /*
@@ -233,7 +233,7 @@
  */
 
 #define ALT_MODULE_CLASS_button_0 altera_avalon_pio
-#define BUTTON_0_BASE 0x5050
+#define BUTTON_0_BASE 0x5060
 #define BUTTON_0_BIT_CLEARING_EDGE_REGISTER 0
 #define BUTTON_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define BUTTON_0_CAPTURE 1
@@ -255,6 +255,33 @@
 
 
 /*
+ * button_1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_button_1 altera_avalon_pio
+#define BUTTON_1_BASE 0x5020
+#define BUTTON_1_BIT_CLEARING_EDGE_REGISTER 0
+#define BUTTON_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define BUTTON_1_CAPTURE 1
+#define BUTTON_1_DATA_WIDTH 1
+#define BUTTON_1_DO_TEST_BENCH_WIRING 0
+#define BUTTON_1_DRIVEN_SIM_VALUE 0
+#define BUTTON_1_EDGE_TYPE "FALLING"
+#define BUTTON_1_FREQ 50000000
+#define BUTTON_1_HAS_IN 1
+#define BUTTON_1_HAS_OUT 0
+#define BUTTON_1_HAS_TRI 0
+#define BUTTON_1_IRQ 2
+#define BUTTON_1_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define BUTTON_1_IRQ_TYPE "EDGE"
+#define BUTTON_1_NAME "/dev/button_1"
+#define BUTTON_1_RESET_VALUE 0
+#define BUTTON_1_SPAN 16
+#define BUTTON_1_TYPE "altera_avalon_pio"
+
+
+/*
  * hal configuration
  *
  */
@@ -271,7 +298,7 @@
  */
 
 #define ALT_MODULE_CLASS_segm_min_0 altera_avalon_pio
-#define SEGM_MIN_0_BASE 0x5020
+#define SEGM_MIN_0_BASE 0x5030
 #define SEGM_MIN_0_BIT_CLEARING_EDGE_REGISTER 0
 #define SEGM_MIN_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEGM_MIN_0_CAPTURE 0
@@ -298,7 +325,7 @@
  */
 
 #define ALT_MODULE_CLASS_segm_ms_0 altera_avalon_pio
-#define SEGM_MS_0_BASE 0x5040
+#define SEGM_MS_0_BASE 0x5050
 #define SEGM_MS_0_BIT_CLEARING_EDGE_REGISTER 0
 #define SEGM_MS_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEGM_MS_0_CAPTURE 0
@@ -325,7 +352,7 @@
  */
 
 #define ALT_MODULE_CLASS_segm_s_0 altera_avalon_pio
-#define SEGM_S_0_BASE 0x5030
+#define SEGM_S_0_BASE 0x5040
 #define SEGM_S_0_BIT_CLEARING_EDGE_REGISTER 0
 #define SEGM_S_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEGM_S_0_CAPTURE 0
@@ -352,7 +379,7 @@
  */
 
 #define ALT_MODULE_CLASS_switches_0 altera_avalon_pio
-#define SWITCHES_0_BASE 0x5060
+#define SWITCHES_0_BASE 0x5070
 #define SWITCHES_0_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCHES_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCHES_0_CAPTURE 0
